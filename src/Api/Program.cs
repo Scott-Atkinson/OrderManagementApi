@@ -15,11 +15,6 @@ builder.Services.AddControllers();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
-builder.Services.AddOpenApiDocument(settings =>
-{
-    settings.Title = "Order Management Api";
-    settings.DocumentName = "api";
-});
 builder.Services.AddEndpointsApiExplorer();
 
 var app = builder.Build();
