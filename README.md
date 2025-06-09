@@ -98,3 +98,7 @@ The following areas have been identified for future enhancement:
 5. **API Response Handling**
 
    - Introduce additional appropriate HTTP status codes for different scenarios
+
+6. **Additional functionality**
+
+   - Add logic around deletion of order
