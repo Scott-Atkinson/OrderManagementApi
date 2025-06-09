@@ -39,7 +39,9 @@ public class GetDailySummaryWithPaginationQueryHandler(IApplicationDbContext con
         {
             Date = todayInMelbourne,
             TotalOrders = todaysOrders.Count,
-            TotalRevenue = todaysOrders.Sum(o => o.TotalAmount),
+            TotalRevenue = todaysOrders
+                .Where(o => o.Status != OrderStatus.Cancelled) // Exclude cancelled orders from revenue
+                .Sum(o => o.TotalAmount),
             PendingOrders = todaysOrders.Count(o => o.Status == OrderStatus.Pending),
             ProcessingOrders = todaysOrders.Count(o => o.Status == OrderStatus.Processing),
             CompletedOrders = todaysOrders.Count(o => o.Status == OrderStatus.Completed),
