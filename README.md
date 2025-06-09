@@ -74,7 +74,7 @@ The following areas have been identified for future enhancement:
 
 1. **API Documentation**
 
-   - Enhance Swagger UI with more detailed endpoint descriptions
+   - Enhance Swagger UI with more detailed endpoint descriptions, resolve the issue where the swagger doc says My Title, even though a title has been defined in program.cs
    - Add request/response examples
    - Include authentication requirements in documentation
 
